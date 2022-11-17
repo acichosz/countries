@@ -1,2 +1,3 @@
 <p>Wybierz kontynent</p>
-<app-continent (click)="navigateToCountriesList('Europa')"></app-continent>
+
+<app-continent *ngFor="let region of continents" [region]="region"></app-continent>

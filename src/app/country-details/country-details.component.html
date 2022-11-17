@@ -1,4 +1,11 @@
 <div>
-  waluta: 
-  język
+  {{countryDetail[0].name.common}}
+  <div>
+    <img width="200px" src="{{ countryDetail[0].flags.svg }}" alt="">
+    {{countryDetail[0]}}</div>
+  <ul>
+    <li><b>Stolica</b>{{countryDetail[0].capital}}</li>
+    <li><b>Waluta</b>{{countryDetail[0].currencies}}</li>
+    <li><b>Populacja</b>{{ countryDetail[0].population }}</li>
+  </ul>
 </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-continents-list',
@@ -7,14 +6,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./continents-list.component.scss']
 })
 export class ContinentsListComponent implements OnInit {
+  continents: Array<Object> = [
+    {
+      label: 'Afryka',
+      value: 'africa'
+    },
+    {
+      label: 'Ameryka',
+      value: 'americas'
+    },
+    {
+      label: 'Azja',
+      value: 'asia'
+    },
+    {
+      label: 'Europa',
+      value: 'europe'
+    },
+    {
+      label: 'Oceania',
+      value: 'oceania'
+    },
+  ];
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  navigateToCountriesList(selectedContinent: String): void {
-    this.router.navigate([`continents/${selectedContinent}`]);
   }
 
 }

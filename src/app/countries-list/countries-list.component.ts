@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from '../service.service';
 
 @Component({
   selector: 'app-countries-list',
@@ -7,14 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./countries-list.component.scss']
 })
 export class CountriesListComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  countries: any;
+  constructor(private router: Router, private _apiService: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const region= this.route.snapshot.paramMap.get('continent');
+
+    this._apiService.getCountries(region)
+    .subscribe(response=> this.countries = response);
   }
 
-  navigateToCountryDetails(): void {
-    this.router.navigate(['/continents/Europa/Polska']);
+  navigateToCountryDetails(selectedCountry:string): void {
+    this.router.navigate([`/continents/Europa/${selectedCountry}`]);
   }
 
 }

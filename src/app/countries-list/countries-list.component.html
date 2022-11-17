@@ -1,1 +1,1 @@
-<p (click)="navigateToCountryDetails()">Polska</p>
+<p *ngFor="let country of countries" (click)="navigateToCountryDetails(country.name.official)">{{country.name.official}}</p>
