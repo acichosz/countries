@@ -11,6 +11,13 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import { ContinentsListComponent } from './continents-list/continents-list.component';
 import { CurrenciesTransformPipe } from './currencies-transform.pipe';
 import { DisplayValuesPipe } from './display-values.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +33,11 @@ import { DisplayValuesPipe } from './display-values.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatListModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

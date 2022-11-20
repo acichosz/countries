@@ -1,13 +1,23 @@
-<div>
-  {{countryDetail[0]?.name.common}}
-  <div>
-    <img width="200px" src="{{ countryDetail[0].flags.svg }}" alt="">
-  </div>
-  <ul>
-    <li><b>Oficjalna nazwa: </b>{{countryDetail[0]?.name.official }}</li>
-    <li><b>Stolica: </b>{{countryDetail[0]?.capital }}</li>
-    <li><b>Waluta: </b>{{countryDetail[0]?.currencies | currenciesTransform}}</li>
-    <li><b>Populacja: </b>{{ countryDetail[0]?.population | number }}</li>
-    <li><b>Język: </b><span>{{ countryDetail[0]?.languages | displayValues }}</span></li>
-  </ul>
-</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <img mat-card-avatar src="{{ countryDetail[0].flags.svg }}" alt="Flaga">
+    <mat-card-title>{{countryDetail[0]?.name.common}}</mat-card-title>
+    <mat-card-subtitle>Official: {{countryDetail[0]?.name.official }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <b>Stolica: </b>{{countryDetail[0]?.capital }}
+      </mat-list-item>
+      <mat-list-item>
+        <b>Waluta: </b>{{countryDetail[0]?.currencies | currenciesTransform}}
+      </mat-list-item>
+      <mat-list-item>
+        <b>Populacja: </b>{{ countryDetail[0]?.population | number }}
+      </mat-list-item>
+      <mat-list-item>
+        <b>Język: </b>{{ countryDetail[0]?.languages | displayValues }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

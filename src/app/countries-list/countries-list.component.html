@@ -1,5 +1,7 @@
-<div *ngFor="let country of countries"
-      (click)="navigateToCountryDetails(country.name.common)">
-  <img width="50px" src="{{country.flags.svg}}" alt="">
-  {{country.name.common}}
-</div>
+<mat-list>
+  <mat-list-item *ngFor="let country of countries"
+  (click)="navigateToCountryDetails(country.name.common)">
+    <img width="50px" src="{{country.flags.svg}}" alt="">
+    {{country.name.common}}
+  </mat-list-item>
+</mat-list>

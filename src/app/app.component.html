@@ -1,3 +1,15 @@
-<header>Nagłówek <button (click)="historyBack()">Wróć</button></header>
+<mat-toolbar>
+  <span>My App</span>
+
+  <button (click)="historyBack()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <!-- <mat-icon>share</mat-icon> -->
+    Wróć
+  </button>
+</mat-toolbar>
 <router-outlet></router-outlet>
-<footer>Footer</footer>
+<mat-toolbar>
+  <button (click)="historyBack()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <!-- <mat-icon>share</mat-icon> -->
+    O mnie
+  </button>
+</mat-toolbar>

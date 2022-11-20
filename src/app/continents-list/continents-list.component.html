@@ -1,3 +1,9 @@
-<p>Wybierz kontynent</p>
-
-<app-continent *ngFor="let region of continents" [region]="region"></app-continent>
+<mat-card class="continentsChoice">
+  <mat-card-header>
+    <p>Wybierz kontynent</p>
+  </mat-card-header>
+  
+  <mat-card class="continentsChoice--card" *ngFor="let region of continents">
+    <app-continent [region]="region"></app-continent>
+  </mat-card>
+</mat-card>
