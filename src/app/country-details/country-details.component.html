@@ -1,12 +1,13 @@
 <div>
-  {{countryDetail[0].name.common}}
+  {{countryDetail[0]?.name.common}}
   <div>
     <img width="200px" src="{{ countryDetail[0].flags.svg }}" alt="">
-    {{countryDetail[0]}}</div>
+  </div>
   <ul>
-    <li><b>Stolica</b>{{countryDetail[0].capital}}</li>
-    <li><b>Waluta</b>{{countryDetail[0].currencies}}</li>
-    <li><b>Populacja</b>{{ countryDetail[0].population }}</li>
-    <li><b>Język</b>{{ countryDetail[0].languages }}</li>
+    <li><b>Oficjalna nazwa: </b>{{countryDetail[0]?.name.official }}</li>
+    <li><b>Stolica: </b>{{countryDetail[0]?.capital }}</li>
+    <li><b>Waluta: </b>{{countryDetail[0]?.currencies | currenciesTransform}}</li>
+    <li><b>Populacja: </b>{{ countryDetail[0]?.population | number }}</li>
+    <li><b>Język: </b><span>{{ countryDetail[0]?.languages | displayValues }}</span></li>
   </ul>
 </div>

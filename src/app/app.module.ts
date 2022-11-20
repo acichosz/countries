@@ -9,6 +9,8 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
 import { ContinentComponent } from './continent/continent.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
 import { ContinentsListComponent } from './continents-list/continents-list.component';
+import { CurrenciesTransformPipe } from './currencies-transform.pipe';
+import { DisplayValuesPipe } from './display-values.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ContinentsListComponent } from './continents-list/continents-list.compo
     ContinentComponent,
     CountriesListComponent,
     ContinentsListComponent,
+    CurrenciesTransformPipe,
+    DisplayValuesPipe,
   ],
   imports: [
     BrowserModule,
