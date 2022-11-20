@@ -1,1 +1,5 @@
-<p *ngFor="let country of countries" (click)="navigateToCountryDetails(country.name.official)">{{country.name.official}}</p>
+<div *ngFor="let country of countries"
+      (click)="navigateToCountryDetails(country.name.common)">
+  <img width="50px" src="{{country.flags.svg}}" alt="">
+  {{country.name.common}}
+</div>
