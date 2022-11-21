@@ -1,7 +1,5 @@
 <mat-toolbar color="primary" class="header">
-  <a href="/">
-    <mat-icon aria-hidden="false" color="accent" aria-label="logo" fontIcon="home"></mat-icon>
-  </a>
+  <app-logo></app-logo>
   <button *ngIf="showBackButton" mat-raised-button color="accent" (click)="historyBack()">Wróć</button>
 </mat-toolbar>
 <section class="contentWrapper">
