@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavigationStart, Router, RouterEvent } from '@angular/router';
 import { Location } from '@angular/common'
 import { filter, map } from 'rxjs';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,7 @@ import { filter, map } from 'rxjs';
 })
 export class AppComponent {
 
-  constructor(private router: Router, private location: Location) {
+  constructor(private router: Router, private location: Location, public dialog: MatDialog) {
     this.router.events
     .pipe(
       filter(event => event instanceof NavigationStart),
@@ -26,6 +28,12 @@ export class AppComponent {
 
   historyBack(): void {
     this.location.back();
+  }
+
+  openDialog(): void {
+    this.dialog.open(AboutMeComponent, {
+      width: '250px',
+    });
   }
   
 }

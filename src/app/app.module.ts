@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CountriesDetailsModule } from './countries-details/countries-details.module';
 import { AngularMaterialComponentsModule } from './angular-material-components/angular-material-components.module';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
