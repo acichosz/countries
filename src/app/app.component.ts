@@ -32,7 +32,7 @@ export class AppComponent {
 
   openDialog(): void {
     this.dialog.open(AboutMeComponent, {
-      width: '250px',
+      width: '320px',
     });
   }
   

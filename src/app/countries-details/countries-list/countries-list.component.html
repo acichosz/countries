@@ -3,7 +3,7 @@
   <mat-card-header class="countriesList__header">
     <mat-form-field class="countriesList__search" appearance="fill">
       <mat-label>Wpisz nazwę kraju</mat-label>
-      <input matInput type="text">
+      <input matInput type="text" (input)="filterCountries($event)">
       <button matSuffix mat-icon-button aria-label="Clear">
         <mat-icon>close</mat-icon>
       </button>
@@ -12,7 +12,7 @@
   
   <mat-card-content>
     <mat-selection-list [multiple]="false" class="countriesList__options">
-      <mat-list-option class="countriesList__option" *ngFor="let country of countries"
+      <mat-list-option class="countriesList__option" *ngFor="let country of filteredCountries"
       (click)="navigateToCountryDetails(country.name.common)">
         <div mat-line class="countriesList__country">
           <img class="countriesList__flag" src="{{country.flags.svg}}" alt="{{country.name.common}} flag">
@@ -20,6 +20,7 @@
         </div>
         <mat-divider></mat-divider>
       </mat-list-option>
+      <h3 *ngIf="!filteredCountries.length">Nie znaleziono wyników dla wpisanej frazy.</h3>
     </mat-selection-list>
   </mat-card-content>
 </mat-card>
