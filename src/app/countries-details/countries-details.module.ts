@@ -6,6 +6,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
 import { CountriesListComponent } from './countries-list/countries-list.component';
 import { ContinentsListComponent } from './continents-list/continents-list.component';
 import { AngularMaterialComponentsModule } from '../angular-material-components/angular-material-components.module';
+import { CountriesDetailsRoutingModule } from './countries-details-routing.module';
 
 
 
@@ -18,7 +19,8 @@ import { AngularMaterialComponentsModule } from '../angular-material-components/
   imports: [
     CommonModule,
     SharedModule,
-    AngularMaterialComponentsModule
+    AngularMaterialComponentsModule,
+    CountriesDetailsRoutingModule
   ]
 })
 export class CountriesDetailsModule { }
