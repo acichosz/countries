@@ -8,14 +8,14 @@ import { ApiService } from 'src/app/shared/services/api.service';
   styleUrls: ['./country-details.component.scss']
 })
 export class CountryDetailsComponent implements OnInit {
-  countryDetail: any = {};
-  constructor(private _apiService: ApiService, private route: ActivatedRoute) { }
+  countryDetails: any = {};
+  constructor(private _apiService: ApiService, private route: ActivatedRoute) {
+    this.route.data.subscribe(value => {
+      this.countryDetails = value['countryDetails'];
+    });
+   }
 
   ngOnInit(): void {
     const country= this.route.snapshot.paramMap.get('country');
-
-    this._apiService.getCountryDetail(country)
-    .subscribe(response=> this.countryDetail = response);
   }
-
 }

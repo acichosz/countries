@@ -8,19 +8,23 @@ import { ApiService } from 'src/app/shared/services/api.service';
   styleUrls: ['./countries-list.component.scss']
 })
 export class CountriesListComponent implements OnInit {
-  countries: any;
+  countries: any = [];
+  region: string | null = '';
 
-  constructor(private router: Router, private _apiService: ApiService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private _apiService: ApiService, private route: ActivatedRoute) { 
+    this.route.data.subscribe(value => {
+      this.countries = value['countriesList'];
+    });
+  }
 
   ngOnInit(): void {
-    const region= this.route.snapshot.paramMap.get('continent');
+    this.region = this.route.snapshot.paramMap.get('continent');
 
-    this._apiService.getCountries(region)
-    .subscribe(response=> this.countries = response);
+    // this._apiService.getCountries(this.region)
+    // .subscribe(response => this.countries = response);
   }
 
   navigateToCountryDetails(selectedCountry:string): void {
-    this.router.navigate([`/continents/Europa/${selectedCountry}`]);
+    this.router.navigate([`/continents/${this.region}/${selectedCountry}`]);
   }
-
 }

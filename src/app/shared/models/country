@@ -1,0 +1,13 @@
+export class Country {
+  flags: {
+    png: string;
+    svg: string;
+  };
+  name: {
+    common: string;
+    official: string;
+    nativeName: Object;
+  };
+  capital: Array<string>;
+  altSpellings: Array<string>;
+}

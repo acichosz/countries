@@ -1,22 +1,22 @@
 <mat-card class="countryDetails">
   <mat-card-header>
-    <img mat-card-avatar class="countryDetails__flag" src="{{ countryDetail[0]?.flags.svg }}" alt="{{countryDetail[0]?.name.common}} flag">
-    <mat-card-title>{{countryDetail[0]?.name.common}}</mat-card-title>
-    <mat-card-subtitle>Official: {{countryDetail[0]?.name.official }}</mat-card-subtitle>
+    <img mat-card-avatar class="countryDetails__flag" src="{{ countryDetails[0]?.flags.svg }}" alt="{{countryDetails[0]?.name.common}} flag">
+    <mat-card-title>{{countryDetails[0]?.name.common}}</mat-card-title>
+    <mat-card-subtitle>Official: {{countryDetails[0]?.name.official }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <mat-list>
       <mat-list-item>
-        <p><b>Stolica: </b>{{ countryDetail[0]?.capital }}</p>
+        <p><b>Stolica: </b>{{ countryDetails[0]?.capital }}</p>
       </mat-list-item>
       <mat-list-item>
-        <p><b>Waluta: </b>{{ countryDetail[0]?.currencies | currenciesTransform }}</p>
+        <p><b>Waluta: </b>{{ countryDetails[0]?.currencies | currenciesTransform }}</p>
       </mat-list-item>
       <mat-list-item>
-        <p><b>Populacja: </b>{{ countryDetail[0]?.population | number }}</p>
+        <p><b>Populacja: </b>{{ countryDetails[0]?.population | number }}</p>
       </mat-list-item>
       <mat-list-item>
-        <p><b>Język: </b>{{ countryDetail[0]?.languages | displayValues }}</p>
+        <p><b>Język: </b>{{ countryDetails[0]?.languages | displayValues }}</p>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
