@@ -1,7 +1,24 @@
-<mat-list>
-  <mat-list-item *ngFor="let country of countries"
-  (click)="navigateToCountryDetails(country.name.common)">
-    <img width="50px" src="{{country.flags.svg}}" alt="">
-    {{country.name.common}}
-  </mat-list-item>
-</mat-list>
+<mat-card class="countriesList">
+  <mat-card-header class="countriesList__header">
+    <mat-form-field class="countriesList__search" appearance="fill">
+      <mat-label>Wpisz nazwę kraju</mat-label>
+      <input matInput type="text">
+      <button matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <mat-selection-list [multiple]="false" class="countriesList__options">
+      <mat-list-option class="countriesList__option" *ngFor="let country of countries"
+      (click)="navigateToCountryDetails(country.name.common)">
+        <div mat-line class="countriesList__country">
+          <img class="countriesList__flag" src="{{country.flags.svg}}" alt="{{country.name.common}} flag">
+          {{country.name.common}}
+        </div>
+        <mat-divider></mat-divider>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>

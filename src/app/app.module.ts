@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { CountryDetailsComponent } from './country-details/country-details.component';
-import { ContinentComponent } from './continent/continent.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
 import { ContinentsListComponent } from './continents-list/continents-list.component';
 import { CurrenciesTransformPipe } from './currencies-transform.pipe';
@@ -17,13 +16,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryDetailsComponent,
-    ContinentComponent,
     CountriesListComponent,
     ContinentsListComponent,
     CurrenciesTransformPipe,
@@ -37,7 +37,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatListModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

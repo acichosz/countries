@@ -1,9 +1,14 @@
-<mat-card class="continentsChoice">
-  <mat-card-header>
-    <p>Wybierz kontynent</p>
+<mat-card class="continentsList">
+  <mat-card-header class="continentsList__header">
+    <mat-card-title>Wybierz kontynent</mat-card-title>
   </mat-card-header>
   
-  <mat-card class="continentsChoice--card" *ngFor="let region of continents">
-    <app-continent [region]="region"></app-continent>
-  </mat-card>
+  <mat-card-content>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option (click)="navigateToCountriesList(continent.value)" class="continentsList__option" *ngFor="let continent of continents">
+        {{ continent.label }}
+        <mat-divider></mat-divider>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
 </mat-card>

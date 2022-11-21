@@ -1,5 +1,17 @@
-.continentsChoice {
-  width: 50%;
-  margin: 1.25rem auto;
-  text-align: center;
+.continentsList {
+
+  &__header {
+    display: block;
+    text-align: center;
+  }
+
+  &__option {
+    margin: 0.5rem;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      background: #f6f6f6;
+    }
+  }
 }

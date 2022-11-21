@@ -1,15 +1,12 @@
-<mat-toolbar>
-  <span>My App</span>
-
-  <button (click)="historyBack()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <!-- <mat-icon>share</mat-icon> -->
-    Wróć
-  </button>
+<mat-toolbar color="primary" class="header">
+  <a href="/">
+    <mat-icon aria-hidden="false" color="accent" aria-label="logo" fontIcon="home"></mat-icon>
+  </a>
+  <button mat-raised-button color="accent" (click)="historyBack()">Wróć</button>
 </mat-toolbar>
-<router-outlet></router-outlet>
-<mat-toolbar>
-  <button (click)="historyBack()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <!-- <mat-icon>share</mat-icon> -->
-    O mnie
-  </button>
+<section class="contentWrapper">
+  <router-outlet></router-outlet>
+</section>
+<mat-toolbar color="primary" class="footer">
+  <button mat-raised-button color="accent">O mnie</button>
 </mat-toolbar>

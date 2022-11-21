@@ -9,6 +9,7 @@ import { ApiService } from '../service.service';
 })
 export class CountriesListComponent implements OnInit {
   countries: any;
+
   constructor(private router: Router, private _apiService: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
