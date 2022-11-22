@@ -1,42 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IContinent } from 'src/app/shared/models/continents.model';
 
 @Component({
   selector: 'app-continents-list',
   templateUrl: './continents-list.component.html',
-  styleUrls: ['./continents-list.component.scss']
+  styleUrls: ['./continents-list.component.scss'],
 })
-export class ContinentsListComponent implements OnInit {
-  continents: Array<any> = [
+export class ContinentsListComponent {
+  continents: Array<IContinent> = [
     {
       label: 'Afryka',
       value: 'africa',
-
     },
     {
       label: 'Ameryka',
-      value: 'americas'
+      value: 'americas',
     },
     {
       label: 'Azja',
-      value: 'asia'
+      value: 'asia',
     },
     {
       label: 'Europa',
-      value: 'europe'
+      value: 'europe',
     },
     {
       label: 'Oceania',
-      value: 'oceania'
+      value: 'oceania',
     },
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
-
-  navigateToCountriesList(selectedContinent: String): void {
+  navigateToCountriesList(selectedContinent: string): void {
     this.router.navigate([`continents/${selectedContinent}`]);
   }
 }

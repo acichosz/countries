@@ -7,23 +7,25 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import { CountryDetailsComponent } from './country-details/country-details.component';
 
 const routes: Routes = [
-  {path: '', component: ContinentsListComponent},
-  {path: 'continents/:continent',
+  { path: '', component: ContinentsListComponent },
+  {
+    path: 'continents/:continent',
     component: CountriesListComponent,
     resolve: {
-      countriesList: CountriesListResolver
-    }
+      countriesList: CountriesListResolver,
+    },
   },
-  {path: 'continents/:continent/:country',
+  {
+    path: 'continents/:continent/:country',
     component: CountryDetailsComponent,
     resolve: {
-      countryDetails: CountryDetailsResolver
-    }
+      countryDetails: CountryDetailsResolver,
+    },
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes) ],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class CountriesDetailsRoutingModule { }
+export class CountriesDetailsRoutingModule {}

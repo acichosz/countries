@@ -1,10 +1,19 @@
 <mat-toolbar color="primary" class="header">
   <app-logo></app-logo>
-  <button *ngIf="showBackButton" mat-raised-button color="accent" (click)="historyBack()">Wróć</button>
+  <button
+    *ngIf="showBackButton"
+    mat-raised-button
+    color="accent"
+    (click)="historyBack()"
+  >
+    Wróć
+  </button>
 </mat-toolbar>
 <section class="contentWrapper">
   <router-outlet></router-outlet>
 </section>
 <mat-toolbar color="primary" class="footer">
-  <button mat-raised-button color="accent" (click)="openDialog()">O mnie</button>
+  <button mat-raised-button color="accent" (click)="openDialog()">
+    O mnie
+  </button>
 </mat-toolbar>

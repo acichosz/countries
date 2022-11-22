@@ -8,8 +8,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -31,6 +29,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatToolbarModule,
     MatButtonModule,
     MatDialogModule,
-  ]
+  ],
 })
-export class AngularMaterialComponentsModule { }
+export class AngularMaterialComponentsModule {}

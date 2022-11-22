@@ -1,5 +1,4 @@
 .countriesList {
-
   &__header {
     display: block;
   }
@@ -8,16 +7,16 @@
     overflow: auto;
     max-height: 45vh;
   }
-  
+
   &__search {
     width: 100%;
   }
-  
-  &__country{
+
+  &__country {
     display: flex;
     align-items: center;
   }
-  
+
   &__flag {
     margin-right: 0.5rem;
     height: 24px;

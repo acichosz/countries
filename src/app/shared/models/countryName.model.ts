@@ -1,5 +1,5 @@
-export interface ICountryName{
+export interface ICountryName {
   common: string;
   official: string;
   nativeName: Object;
-};
+}

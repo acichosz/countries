@@ -8,8 +8,6 @@ import { ContinentsListComponent } from './continents-list/continents-list.compo
 import { AngularMaterialComponentsModule } from '../angular-material-components/angular-material-components.module';
 import { CountriesDetailsRoutingModule } from './countries-details-routing.module';
 
-
-
 @NgModule({
   declarations: [
     CountryDetailsComponent,
@@ -20,7 +18,7 @@ import { CountriesDetailsRoutingModule } from './countries-details-routing.modul
     CommonModule,
     SharedModule,
     AngularMaterialComponentsModule,
-    CountriesDetailsRoutingModule
-  ]
+    CountriesDetailsRoutingModule,
+  ],
 })
-export class CountriesDetailsModule { }
+export class CountriesDetailsModule {}

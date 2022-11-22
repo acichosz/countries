@@ -1,12 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'displayValues'
+  name: 'displayValues',
 })
 export class DisplayValuesPipe implements PipeTransform {
-
-  transform(value: Object): String {
-    return  Object.values(value).join(', ');
+  transform(value: Object): string {
+    return Object.values(value).join(', ');
   }
-
 }

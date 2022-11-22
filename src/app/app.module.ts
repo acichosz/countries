@@ -11,24 +11,18 @@ import { AngularMaterialComponentsModule } from './angular-material-components/a
 import { AboutMeComponent } from './about-me/about-me.component';
 import { LogoComponent } from './logo/logo.component';
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    AboutMeComponent,
-    LogoComponent,
-  ],
+  declarations: [AppComponent, AboutMeComponent, LogoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     CountriesDetailsModule,
-    AngularMaterialComponentsModule
+    AngularMaterialComponentsModule,
   ],
-  exports: [
-  ],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
